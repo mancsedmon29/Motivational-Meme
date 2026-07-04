@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone 1: Motivation Meme Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-[var(--bg-secondary)]/80 backdrop-blur-lg border-b border-[var(--border)]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-code text-2xl gradient-text"></i>
+                    <span class="font-semibold text-lg">Capstone 1 Tutorial</span>
+                </div>
+                <a href="#solution" class="hidden sm:block px-4 py-2 bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white rounded-lg text-sm font-medium transition-all">
+                    View Solution
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="relative py-16 sm:py-24 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-purple-900/10 to-transparent"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center max-w-3xl mx-auto">
+                <div class="inline-block px-4 py-1.5 bg-purple-500/10 border border-purple-500/20 rounded-full text-sm text-purple-300 mb-6">
+                    <i class="fas fa-graduation-cap mr-2"></i>HTML & CSS Basics
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                    Capstone 1 Project<br>
+                    <span class="gradient-text">Motivation Meme Webpage Tutorial</span>
+                </h1>
+                <p class="text-[var(--text-secondary)] text-lg sm:text-xl mb-8">
+                    Learn how to build a viral-style motivation meme page using HTML and CSS. Perfect for beginners!
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#live-preview" class="px-6 py-3 bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white rounded-lg font-medium transition-all shadow-lg shadow-purple-500/25">
+                        <i class="fas fa-eye mr-2"></i>View Live Preview
+                    </a>
+                    <a href="#tutorial" class="px-6 py-3 bg-[var(--bg-card)] hover:bg-[#222] border border-[var(--border)] rounded-lg font-medium transition-all">
+                        <i class="fas fa-book mr-2"></i>Start Tutorial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Preview Section -->
+    <section id="live-preview" class="py-16 bg-[var(--bg-secondary)]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-3">
+                    <i class="fas fa-desktop text-[var(--accent)] mr-2"></i>Live Preview
+                </h2>
+                <p class="text-[var(--text-secondary)]">This is what your final project will look like</p>
+            </div>
+            
+            <div class="card p-4 sm:p-8">
+                <div class="meme-preview rounded-lg overflow-hidden">
+                    <div class="meme-preview-container">
+                        <img src="./images/daenerys.jpeg" alt="Meme preview image">
+                        <h1>The Special Moment</h1>
+                        <p>When you find the perfect avocado at the supermarket.</p>
+                    </div>
+                </div>
+                <div class="mt-4 p-4 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">
+                    <p class="text-sm text-yellow-200">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        <strong>Note:</strong> Replace <span class="property-badge">src="./images/daenerys.jpeg"</span> with your own image path in the HTML. The placeholder above is for demonstration only.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutorial Steps -->
+    <section id="tutorial" class="py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-3">
+                    <i class="fas fa-list-ol text-[var(--accent)] mr-2"></i>Step-by-Step Breakdown
+                </h2>
+                <p class="text-[var(--text-secondary)]">Understanding each part of the code</p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Step 1: HTML Structure -->
+                <div class="card p-6 sm:p-8">
+                    <div class="flex gap-4 items-start">
+                        <div class="step-number">1</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl sm:text-2xl font-semibold mb-4">HTML Structure</h3>
+                            <p class="text-[var(--text-secondary)] mb-4">
+                                The HTML provides the structure and content of your webpage. Let's break down each part:
+                            </p>
+                            
+                            <div class="code-block p-4 mb-4">
+                                <button class="copy-btn" data-copy="html-structure"><i class="fas fa-copy mr-1"></i>Copy</button>
+                                <pre id="html-structure">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Motivation Meme&lt;/title&gt;
+    &lt;link rel="stylesheet" href="test.css"&gt;
+    &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+    &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="banner"&gt;
+        &lt;img src="./images/daenerys.jpeg" alt=""&gt;
+        &lt;h1&gt;The Special Moment&lt;/h1&gt;
+        &lt;p&gt;When you find the perfect avocado at the supermarket.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                            </div>
+
+                            <div class="space-y-3 text-sm">
+                                <div class="flex gap-3">
+                                    <i class="fas fa-check text-green-400 mt-1"></i>
+                                    <div><span class="property-badge">&lt;meta viewport&gt;</span> Makes your site responsive on mobile devices</div>
+                                </div>
+                                <div class="flex gap-3">
+                                    <i class="fas fa-check text-green-400 mt-1"></i>
+                                    <div><span class="property-badge">&lt;link rel="stylesheet"&gt;</span> Connects your CSS file to style the page</div>
+                                </div>
+                                <div class="flex gap-3">
+                                    <i class="fas fa-check text-green-400 mt-1"></i>
+                                    <div><span class="property-badge">Google Fonts</span> Imports the Libre Baskerville font for that elegant meme look</div>
+                                </div>
+                                <div class="flex gap-3">
+                                    <i class="fas fa-check text-green-400 mt-1"></i>
+                                    <div><span class="property-badge">&lt;div class="banner"&gt;</span> Container that holds your meme content</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: CSS Body -->
+                <div class="card p-6 sm:p-8">
+                    <div class="flex gap-4 items-start">
+                        <div class="step-number">2</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl sm:text-2xl font-semibold mb-4">Body Styling</h3>
+                            <p class="text-[var(--text-secondary)] mb-4">
+                                First, we set the overall page appearance with a black background:
+                            </p>
+                            
+                            <div class="code-block p-4 mb-4">
+                                <button class="copy-btn" data-copy="css-body"><i class="fas fa-copy mr-1"></i>Copy</button>
+                                <pre id="css-body">body {
+    background-color: black;
+}</pre>
+                            </div>
+
+                            <div class="p-4 bg-purple-500/10 border border-purple-500/20 rounded-lg">
+                                <p class="text-sm">
+                                    <i class="fas fa-lightbulb text-yellow-400 mr-2"></i>
+                                    <strong>What it does:</strong> <span class="property-badge">background-color: black</span> sets the entire page background to black, giving that classic meme aesthetic.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: CSS Div Container -->
+                <div class="card p-6 sm:p-8">
+                    <div class="flex gap-4 items-start">
+                        <div class="step-number">3</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl sm:text-2xl font-semibold mb-4">Center & Style the Container</h3>
+                            <p class="text-[var(--text-secondary)] mb-4">
+                                This is where the magic happens. We center everything and style the text:
+                            </p>
+                            
+                            <div class="code-block p-4 mb-4">
+                                <button class="copy-btn" data-copy="css-div"><i class="fas fa-copy mr-1"></i>Copy</button>
+                                <pre id="css-div">div {
+    text-align: center;
+    margin: 100px auto;
+    width: 50%;
+    font-family: "Libre Baskerville", serif;
+    color: white;
+}</pre>
+                            </div>
+
+                            <div class="space-y-3 text-sm">
+                                <div class="p-3 bg-[var(--bg-primary)] rounded-lg border border-[var(--border)]">
+                                    <span class="property-badge">text-align: center</span>
+                                    <p class="mt-1 text-[var(--text-secondary)]">Centers all text and inline elements inside the div horizontally</p>
+                                </div>
+                                <div class="p-3 bg-[var(--bg-primary)] rounded-lg border border-[var(--border)]">
+                                    <span class="property-badge">margin: 100px auto</span>
+                                    <p class="mt-1 text-[var(--text-secondary)]">100px top/bottom margin, auto left/right centers the div itself</p>
+                                </div>
+                                <div class="p-3 bg-[var(--bg-primary)] rounded-lg border border-[var(--border)]">
+                                    <span class="property-badge">width: 50%</span>
+                                    <p class="mt-1 text-[var(--text-secondary)]">Makes the container half the screen width for a focused look</p>
+                                </div>
+                                <div class="p-3 bg-[var(--bg-primary)] rounded-lg border border-[var(--border)]">
+                                    <span class="property-badge">font-family</span>
+                                    <p class="mt-1 text-[var(--text-secondary)]">Uses the elegant Libre Baskerville font from Google Fonts</p>
+                                </div>
+                                <div class="p-3 bg-[var(--bg-primary)] rounded-lg border border-[var(--border)]">
+                                    <span class="property-badge">color: white</span>
+                                    <p class="mt-1 text-[var(--text-secondary)]">Makes all text white so it pops against the black background</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: CSS Heading -->
+                <div class="card p-6 sm:p-8">
+                    <div class="flex gap-4 items-start">
+                        <div class="step-number">4</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl sm:text-2xl font-semibold mb-4">Style the Heading</h3>
+                            <p class="text-[var(--text-secondary)] mb-4">
+                                Make your title stand out with uppercase text and larger size:
+                            </p>
+                            
+                            <div class="code-block p-4 mb-4">
+                                <button class="copy-btn" data-copy="css-h1"><i class="fas fa-copy mr-1"></i>Copy</button>
+                                <pre id="css-h1">h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+}</pre>
+                            </div>
+
+                            <div class="space-y-3 text-sm">
+                                <div class="p-3 bg-[var(--bg-primary)] rounded-lg border border-[var(--border)]">
+                                    <span class="property-badge">text-transform: uppercase</span>
+                                    <p class="mt-1 text-[var(--text-secondary)]">Converts all text to UPPERCASE for emphasis and meme style</p>
+                                </div>
+                                <div class="p-3 bg-[var(--bg-primary)] rounded-lg border border-[var(--border)]">
+                                    <span class="property-badge">font-size: 3rem</span>
+                                    <p class="mt-1 text-[var(--text-secondary)]">Makes heading 3x the base font size (48px) for impact</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5: CSS Image -->
+                <div class="card p-6 sm:p-8">
+                    <div class="flex gap-4 items-start">
+                        <div class="step-number">5</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl sm:text-2xl font-semibold mb-4">Style the Image</h3>
+                            <p class="text-[var(--text-secondary)] mb-4">
+                                The final touch: make your image responsive with a white border:
+                            </p>
+                            
+                            <div class="code-block p-4 mb-4">
+                                <button class="copy-btn" data-copy="css-img"><i class="fas fa-copy mr-1"></i>Copy</button>
+                                <pre id="css-img">img {
+    width: 100%;
+    border: 5px solid white;
+}</pre>
+                            </div>
+
+                            <div class="space-y-3 text-sm">
+                                <div class="p-3 bg-[var(--bg-primary)] rounded-lg border border-[var(--border)]">
+                                    <span class="property-badge">width: 100%</span>
+                                    <p class="mt-1 text-[var(--text-secondary)]">Makes image fill its container width - fully responsive!</p>
+                                </div>
+                                <div class="p-3 bg-[var(--bg-primary)] rounded-lg border border-[var(--border)]">
+                                    <span class="property-badge">border: 5px solid white</span>
+                                    <p class="mt-1 text-[var(--text-secondary)]">Adds a 5px thick white border - classic motivation poster style</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Solution Section -->
+    <section id="solution" class="py-16 bg-[var(--bg-secondary)]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-3">
+                    <i class="fas fa-code text-[var(--accent)] mr-2"></i>Complete Solution
+                </h2>
+                <p class="text-[var(--text-secondary)] mb-6">Click below to reveal the full code</p>
+                <button id="toggleSolution" class="px-6 py-3 bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white rounded-lg font-medium transition-all shadow-lg shadow-purple-500/25">
+                    <i class="fas fa-eye mr-2"></i>Show Solution
+                </button>
+            </div>
+
+            <div id="solutionContent" class="solution-content">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- HTML Solution -->
+                    <div class="card p-6">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center gap-2">
+                            <i class="fab fa-html5 text-orange-500"></i>index.html
+                        </h3>
+                        <div class="code-block p-4">
+                            <button class="copy-btn" data-copy="html-full"><i class="fas fa-copy mr-1"></i>Copy</button>
+                            <pre id="html-full">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Motivation Meme&lt;/title&gt;
+    &lt;link rel="stylesheet" href="test.css"&gt;
+    &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+    &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="banner"&gt;
+        &lt;img src="./images/daenerys.jpeg" alt=""&gt;
+        &lt;h1&gt;The Special Moment&lt;/h1&gt;
+        &lt;p&gt;
+            When you find the perfect avocado at the supermarket.
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </div>
+                    </div>
+
+                    <!-- CSS Solution -->
+                    <div class="card p-6">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center gap-2">
+                            <i class="fab fa-css3-alt text-blue-500"></i>test.css
+                        </h3>
+                        <div class="code-block p-4">
+                            <button class="copy-btn" data-copy="css-full"><i class="fas fa-copy mr-1"></i>Copy</button>
+                            <pre id="css-full">body {
+    background-color: black;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+div {
+    text-align: center;
+    margin: 100px auto;
+    width: 50%;
+    font-family: "Libre Baskerville", serif;
+    color: white;
+}
+
+img {
+    width: 100%;
+    border: 5px solid white;
+}</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 p-6 bg-green-500/10 border border-green-500/20 rounded-lg">
+                    <h4 class="font-semibold text-green-300 mb-3 flex items-center gap-2">
+                        <i class="fas fa-rocket"></i>Next Steps
+                    </h4>
+                    <ul class="space-y-2 text-sm text-[var(--text-secondary)]">
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Replace the image path with your own meme image</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Customize the text to make it your own motivation meme</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Test on different screen sizes to see the responsive design</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Upload your project to GitHub following the instructions below</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Upload Section -->
+    <section class="py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="card p-8">
+                <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+                    <div class="text-5xl text-[#333]">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold mb-3">Upload to GitHub</h3>
+                        <p class="text-[var(--text-secondary)] mb-4">
+                            Share your work! Create a new repository on GitHub and upload your <span class="property-badge">index.html</span>, <span class="property-badge">test.css</span>, and images folder. Enable GitHub Pages to get a live URL you can share.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://github.com" target="_blank" class="px-4 py-2 bg-[#24292e] hover:bg-[#1a1e22] text-white rounded-lg text-sm font-medium transition-all">
+                                <i class="fab fa-github mr-2"></i>Go to GitHub
+                            </a>
+                            <a href="https://docs.github.com/en/pages" target="_blank" class="px-4 py-2 bg-[var(--bg-primary)] hover:bg-[#222] border border-[var(--border)] rounded-lg text-sm font-medium transition-all">
+                                <i class="fas fa-book mr-2"></i>GitHub Pages Guide
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[var(--bg-secondary)] border-t border-[var(--border)] py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-[var(--text-secondary)]">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-code text-[var(--accent)]"></i>
+                    <span>Capstone 1 Project | Upload this to GitHub</span>
+                </div>
+                <div class="flex gap-6">
+                    <a href="#tutorial" class="hover:text-[var(--accent)] transition-colors">Tutorial</a>
+                    <a href="#solution" class="hover:text-[var(--accent)] transition-colors">Solution</a>
+                    <a href="#" class="hover:text-[var(--accent)] transition-colors">Resources</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle Solution Visibility
+        const toggleBtn = document.getElementById('toggleSolution');
+        const solutionContent = document.getElementById('solutionContent');
+        let isVisible = false;
+
+        toggleBtn.addEventListener('click', () => {
+            isVisible = !isVisible;
+            solutionContent.classList.toggle('show');
+            toggleBtn.innerHTML = isVisible 
+                ? '<i class="fas fa-eye-slash mr-2"></i>Hide Solution' 
+                : '<i class="fas fa-eye mr-2"></i>Show Solution';
+        });
+
+        // Copy to Clipboard Functionality
+        const copyButtons = document.querySelectorAll('.copy-btn');
+        
+        copyButtons.forEach(btn => {
+            btn.addEventListener('click', async (e) => {
+                e.stopPropagation();
+                const copyId = btn.getAttribute('data-copy');
+                const codeElement = document.getElementById(copyId);
+                
+                if (codeElement) {
+                    try {
+                        await navigator.clipboard.writeText(codeElement.textContent);
+                        
+                        const originalHTML = btn.innerHTML;
+                        btn.innerHTML = '<i class="fas fa-check mr-1"></i>Copied!';
+                        btn.classList.add('copied');
+                        
+                        setTimeout(() => {
+                            btn.innerHTML = originalHTML;
+                            btn.classList.remove('copied');
+                        }, 2000);
+                    } catch (err) {
+                        console.error('Failed to copy:', err);
+                    }
+                }
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+<script>(function(){document.addEventListener("click",function(e){var a=e.target.closest("[data-product-id]");if(!a)return;e.preventDefault();var pid=a.getAttribute("data-product-id");if(pid)parent.postMessage({type:"ecto-artifact-link-click",productId:pid},"*")})})();</script>
+</body>
+</html>
