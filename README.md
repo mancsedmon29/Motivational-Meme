@@ -1,4 +1,4 @@
-# Capstone 1: Motivation Meme Tutorial
+# Capstone 2: Motivation Meme Tutorial
 
 Simple HTML + CSS project na ginawang interactive tutorial.
 
